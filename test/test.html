@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Weather Forecast</title>
+</head>
+<body>
+<br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            <div class="panel">
+                <div class="alert alert-danger" role="alert" style="margin: 0 auto;
+                text-align: center;">
+                    you must click <a href="https://cors-anywhere.herokuapp.com" target="_blank" class="alert-link">Here </a>
+                  </div>
+            
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col col-sm-3 col-xs-12">
+                            <h4 class="title">Weather Forecast</h4>
+                        </div>
+                        <div class="col-sm-9 col-xs-12 text-right">
+                            <div class="btn_group input">
+                                <input type="text" class="form-control input_text" placeholder="search city by name">
+                                <button class="submit btn btn-default" title="search"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Default city tables -->
+                <div id="cityTables">
+                    <!-- searched city -->
+                    <div class="search-city-table active">
+                        <h1 class="cityName" id="name"></h1> 
+                        <div class="panel-body table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Date <i class='far fa-calendar-alt' style='font-size:24px'></i></th>
+                                        <th>Temperature(max/min)<i class='fas fa-temperature-low' style='font-size:24px'></i></th>
+                                        <th>Clouds <i class='fas fa-cloud-moon-rain' style='font-size:24px'></i></th>
+                                        <th>Precipitation <i class='fas fa-cloud-rain' style='font-size:24px'></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="search-date"></td>
+                                        <td class="search-temp"></td>
+                                        <td class="search-clouds"></td>
+                                        <td class="search-precipitation"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="search-date2"></td>
+                                        <td class="search-temp2"></td>
+                                        <td class="search-clouds2"></td>
+                                        <td class="search-precipitation2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="search-date3"></td>
+                                        <td class="search-temp3"></td>
+                                        <td class="search-clouds3"></td>
+                                        <td class="search-precipitation3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="search-date4"></td>
+                                        <td class="search-temp4"></td>
+                                        <td class="search-clouds4"></td>
+                                        <td class="search-precipitation4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="search-date5"></td>
+                                        <td class="search-temp5"></td>
+                                        <td class="search-clouds5"></td>
+                                        <td class="search-precipitation5"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- Moscow table -->
+                    <div class="city-table active">
+                        <h1 class="cityName">Moscow</h1> 
+                        <div class="panel-body table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Date <i class='far fa-calendar-alt' style='font-size:24px'></i></th>
+                                        <th>Temperature(max/min)<i class='fas fa-temperature-low' style='font-size:24px'></i></th>
+                                        <th>Clouds <i class='fas fa-cloud-moon-rain' style='font-size:24px'></i></th>
+                                        <th>Precipitation <i class='fas fa-cloud-rain' style='font-size:24px'></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="date"></td>
+                                        <td class="temp"></td>
+                                        <td class="clouds"></td>
+                                        <td class="precipitation"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="date2"></td>
+                                        <td class="temp2"></td>
+                                        <td class="clouds2"></td>
+                                        <td class="precipitation2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="date3"></td>
+                                        <td class="temp3"></td>
+                                        <td class="clouds3"></td>
+                                        <td class="precipitation3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="date4"></td>
+                                        <td class="temp4"></td>
+                                        <td class="clouds4"></td>
+                                        <td class="precipitation4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="date5"></td>
+                                        <td class="temp5"></td>
+                                        <td class="clouds5"></td>
+                                        <td class="precipitation5"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- London table -->
+                    <div class="city-table">
+                        <h1 class="cityName">London</h1> 
+                        <div class="panel-body table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Date <i class='far fa-calendar-alt' style='font-size:24px'></i></th>
+                                        <th>Temperature(max/min)<i class='fas fa-temperature-low' style='font-size:24px'></i></th>
+                                        <th>Clouds <i class='fas fa-cloud-moon-rain' style='font-size:24px'></i></th>
+                                        <th>Precipitation <i class='fas fa-cloud-rain' style='font-size:24px'></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="date"></td>
+                                        <td class="temp"></td>
+                                        <td class="clouds"></td>
+                                        <td class="precipitation"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="date2"></td>
+                                        <td class="temp2"></td>
+                                        <td class="clouds2"></td>
+                                        <td class="precipitation2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="date3"></td>
+                                        <td class="temp3"></td>
+                                        <td class="clouds3"></td>
+                                        <td class="precipitation3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="date4"></td>
+                                        <td class="temp4"></td>
+                                        <td class="clouds4"></td>
+                                        <td class="precipitation4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="date5"></td>
+                                        <td class="temp5"></td>
+                                        <td class="clouds5"></td>
+                                        <td class="precipitation5"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- New York table -->
+                    <div class="city-table">
+                        <h1 class="cityName">New York</h1> 
+                        <div class="panel-body table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Date <i class='far fa-calendar-alt' style='font-size:24px'></i></th>
+                                        <th>Temperature(max/min)<i class='fas fa-temperature-low' style='font-size:24px'></i></th>
+                                        <th>Clouds <i class='fas fa-cloud-moon-rain' style='font-size:24px'></i></th>
+                                        <th>Precipitation <i class='fas fa-cloud-rain' style='font-size:24px'></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="date"></td>
+                                        <td class="temp"></td>
+                                        <td class="clouds"></td>
+                                        <td class="precipitation"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="date2"></td>
+                                        <td class="temp2"></td>
+                                        <td class="clouds2"></td>
+                                        <td class="precipitation2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="date3"></td>
+                                        <td class="temp3"></td>
+                                        <td class="clouds3"></td>
+                                        <td class="precipitation3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="date4"></td>
+                                        <td class="temp4"></td>
+                                        <td class="clouds4"></td>
+                                        <td class="precipitation4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="date5"></td>
+                                        <td class="temp5"></td>
+                                        <td class="clouds5"></td>
+                                        <td class="precipitation5"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- Saint Petersburg table -->
+                    <div class="city-table">
+                        <h1 class="cityName">Saint Petersburg</h1> 
+                        <div class="panel-body table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Date <i class='far fa-calendar-alt' style='font-size:24px'></i></th>
+                                        <th>Temperature(max/min)<i class='fas fa-temperature-low' style='font-size:24px'></i></th>
+                                        <th>Clouds <i class='fas fa-cloud-moon-rain' style='font-size:24px'></i></th>
+                                        <th>Precipitation <i class='fas fa-cloud-rain' style='font-size:24px'></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="date"></td>
+                                        <td class="temp"></td>
+                                        <td class="clouds"></td>
+                                        <td class="precipitation"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="date2"></td>
+                                        <td class="temp2"></td>
+                                        <td class="clouds2"></td>
+                                        <td class="precipitation2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="date3"></td>
+                                        <td class="temp3"></td>
+                                        <td class="clouds3"></td>
+                                        <td class="precipitation3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="date4"></td>
+                                        <td class="temp4"></td>
+                                        <td class="clouds4"></td>
+                                        <td class="precipitation4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="date5"></td>
+                                        <td class="temp5"></td>
+                                        <td class="clouds5"></td>
+                                        <td class="precipitation5"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- Add more tables for other default cities here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br>
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="test.js"></script>
+
+</body>
+</html>
+
