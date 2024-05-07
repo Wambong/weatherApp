@@ -1,4 +1,4 @@
-1create folder on your desktop and open it VS code
+1. create folder on your desktop and open it VS code
 2. git clone https://github.com/Wambong/weatherApp.git
 
 3. cd weatherApp
